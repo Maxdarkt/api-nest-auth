@@ -16,6 +16,7 @@ export class AccountsController {
   @Inject(forwardRef(() => UsersService))
     private userService: UsersService,
     private accountsService: AccountsService) {}
+
    /**
    * we get account and relations
    * if accoutnId === 1, we get all accounts otherise we get this account and relations
@@ -29,6 +30,21 @@ export class AccountsController {
       const accountId = requester.accountId;
   
       return await this.accountsService.getAccountInfos(accountId);
+    }
+
+    @Get('/:accountId')
+    async getOneAccount(
+      @Param('accountId', ParseIntPipe) accountId: number,
+      @User() requester: UsersEntity
+    ) {
+      if(requester.accountId !== 1 && requester.accountId !== accountId) {
+        throw new HttpException({
+          status: HttpStatus.UNAUTHORIZED,
+          error: `You can't acces to an other account.`,
+        }, HttpStatus.UNAUTHORIZED);
+      }
+      // we send the account
+      return await this.accountsService.findAccountById(accountId)
     }
 
     /**
