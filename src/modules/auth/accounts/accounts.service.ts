@@ -47,16 +47,16 @@ export class AccountsService {
   async getAccountInfos(accountId: number, users: boolean = true): Promise<AccountsEntity[] | AccountsEntity> {
     if(accountId === 1) {
       return await this.accountsRepository.find({
-        relations: {
-          users
-        }
+        // relations: {
+        //   users
+        // }
       });
     } else {
       return await this.accountsRepository.find({
         where: { id: accountId },
-        relations: {
-          users
-        }
+        // relations: {
+        //   users
+        // }
       });
     }
   }

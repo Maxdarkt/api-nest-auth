@@ -6,7 +6,7 @@ export const mockUsers: AddUserDto[] = [
     matricule: '001',
     lastname: 'Tourneux',
     firstname: 'Maxence',
-    email: 'tourneuxmaxence@gmail.com',
+    email: 'maxence@mt-develop.ch',
     password: 'TeltCO08!',
     mobile: '33661136306',
     birthDate: new Date('1986-06-12'),
