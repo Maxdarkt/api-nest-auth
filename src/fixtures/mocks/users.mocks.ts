@@ -1,0 +1,71 @@
+import { AddUserDto } from "src/modules/auth/users/dto/add-users.dto";
+import { usersRole } from "src/modules/auth/users/enum/users.enum";
+
+export const mockUsers: AddUserDto[] = [
+  {
+    matricule: '001',
+    lastname: 'Tourneux',
+    firstname: 'Maxence',
+    email: 'tourneuxmaxence@gmail.com',
+    password: 'TeltCO08!',
+    mobile: '33661136306',
+    birthDate: new Date('1986-06-12'),
+    complement: 'Le Centaurée',
+    address: '450 route du collège',
+    postal: '74330',
+    city: 'Poisy',
+    country: 'France',
+    role: usersRole.ROOT,
+    isValidatedEmail: true,
+    accountId: 1
+  },
+  {
+    matricule: '100',
+    lastname: 'CECCON',
+    firstname: 'Thibaud',
+    email: 'Thibaud.ceccon@implenia.com',
+    password: 'TeltCO08!',
+    mobile: '33645040827',
+    birthDate: new Date('1985-12-06'),
+    complement: null,
+    address: 'Avenue centrale',
+    postal: '74600',
+    city: 'SEYNOD',
+    country: 'France',
+    role: usersRole.MANAGER,
+    isValidatedEmail: true,
+    accountId: 2
+  },
+  {
+    matricule: '200',
+    lastname: "FRACCAROLI",
+    firstname: "Margaux",
+    email: "mfraccaroli@nge-gc.fr",
+    password: 'TeltCO08!',
+    mobile: "33750689615",
+    birthDate: new Date('1983-09-14'),
+    address: "rue du centre",
+    postal: "73000",
+    city: "AIX-LES-BAINS",
+    country: "FRANCE",
+    role: usersRole.MANAGER,
+    isValidatedEmail: true,
+    accountId: 2
+  },
+  {
+    matricule: '264',
+    lastname: "Doe",
+    firstname: "John",
+    email: "john.doe@telt.com",
+    password: 'TeltCO08!',
+    mobile: "33660000000",
+    birthDate: new Date('1983-09-14'),
+    address: "rue de la mandallaz",
+    postal: "74330",
+    city: "SILLINGY",
+    country: "FRANCE",
+    role: usersRole.USER,
+    isValidatedEmail: true,
+    accountId: 2
+  },
+];

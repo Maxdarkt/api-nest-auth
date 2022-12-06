@@ -10,7 +10,9 @@ export enum companyStatus {
   'SCA' = 'SCA',
   'SCS' = 'SCS',
   'SA' = 'SA',
-  'SELARL' = 'SELARL'
+  'SELARL' = 'SELARL',
+  'GIE' = 'GIE',
+  'GPT' = 'GROUPEMENT'
 }
 
 export enum currency {

@@ -18,6 +18,8 @@ export class AccountsEntity {
   @Column({
     type: 'varchar',
     length: 55,
+    nullable: true,
+    default: null
   })
   division: string;
 
